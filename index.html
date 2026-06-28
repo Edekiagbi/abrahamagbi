@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abraham E. Agbi — Web Developer & Lead Digital Instructor</title>
+    <meta name="description" content="Portfolio of Abraham E. Agbi — a results-driven Web Developer specializing in HTML, CSS, JavaScript, PHP, WordPress, Shopify, and WooCommerce.">
+    <meta name="keywords" content="web developer, wordpress developer, shopify developer, frontend developer, Nigeria, Abraham Agbi">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Abraham E. Agbi — Web Developer & Lead Digital Instructor">
+    <meta property="og:description" content="Results-driven Web Developer experienced in designing, developing, and optimizing websites using HTML, CSS, JavaScript, PHP, WordPress, Shopify, and WooCommerce.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abrahamagbi.dev">
+    <meta property="og:image" content="assets/images/logofavicon.png">
+
+    <link rel="icon" type="image/png" href="assets/images/logofavicon.png">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abraham E. Agbi",
+        "jobTitle": "Web Developer & Lead Digital Instructor",
+        "url": "https://abrahamagbi.dev",
+        "sameAs": [
+            "https://github.com/abrahamagbi",
+            "https://linkedin.com/in/abraham-agbi"
+        ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Tailwind CSS (via CDN for utility classes) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-custom.css">
+    <link rel="stylesheet" href="css/tailwind-custom.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress" role="progressbar" aria-label="Reading progress"></div>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="assets/images/logofavicon.png" alt="Abraham Agbi" class="nav-logo">
+                <span class="brand-text">Abraham Agbi</span>
+            </a>
+            <button class="navbar-toggler hamburger" id="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav-menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions d-flex align-items-center gap-3 ms-lg-3">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero-section">
+        <div class="container h-100 d-flex align-items-center">
+            <div class="row w-100 align-items-center">
+                <div class="col-lg-6 hero-content" data-aos="fade-up">
+                    <p class="hero-greeting">Hello, I'm</p>
+                    <h1 class="hero-name">Abraham</h1>
+                    <h2 class="hero-title">
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="typing-cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        Results-driven Web Developer with experience designing, developing, maintaining, and
+                        optimizing websites and web applications using HTML, CSS, JavaScript, PHP, MySQL,
+                        WordPress, Shopify, and WooCommerce.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary btn-lg">
+                            <i class="fas fa-eye me-2"></i>View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Contact Me
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/abrahamagbi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/abraham-agbi" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:abrahamagbi49@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-visual text-center" data-aos="fade-left">
+                    <div class="hero-avatar">
+                        <img src="assets/images/profilepic1.png" alt="Abraham" class="hero-profile-img">
+                    </div>
+                    <div class="floating-shapes">
+                        <span class="shape shape-1"></span>
+                        <span class="shape shape-2"></span>
+                        <span class="shape shape-3"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <span>Scroll</span>
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title gradient-text">About Me</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Results-driven Web Developer with 4+ years of experience</p>
+            </div>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="about-image">
+                        <img src="assets/images/profilepic1.png" alt="Abraham" class="about-profile-img">
+                        <div class="about-exp-badge">
+                            <span class="exp-number">4+</span>
+                            <span class="exp-label">Years<br>Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="about-content">
+                        <p class="about-text">
+                            Results-driven Web Developer with experience designing, developing, maintaining, and
+                            optimizing websites and web applications using HTML, CSS, JavaScript, PHP, MySQL,
+                            WordPress, Shopify, and WooCommerce. Skilled in building responsive user interfaces,
+                            troubleshooting technical issues, and improving website performance, security, and SEO.
+                        </p>
+                        <p class="about-text">
+                            Experienced in developing user-friendly websites, implementing responsive designs,
+                            maintaining CMS platforms, and collaborating with designers and stakeholders to deliver
+                            high-quality digital solutions. Strong problem-solving skills with proven ability to debug
+                            applications, optimize user experiences, and ensure cross-browser compatibility.
+                        </p>
+                        <p class="about-text">
+                            Currently serving as Web Developer & Lead Digital Instructor at JJ Technologies,
+                            training aspiring developers while building and maintaining production-ready websites
+                            across multiple industries.
+                        </p>
+                        <div class="about-details row g-3 mt-4">
+                            <div class="col-sm-6">
+                                <ul class="details-list">
+                                    <li><strong>Name:</strong> Abraham E. Agbi</li>
+                                    <li><strong>Location:</strong> Nigeria</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="details-list">
+                                    <li><strong>Experience:</strong> 4+ Years</li>
+                                    <li><strong>Freelance:</strong> <span class="text-success">Available</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Stats Row -->
+            <div class="row stats-row g-4 mt-5" data-aos="fade-up">
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <span class="stat-number counter" data-target="4">0</span>
+                        <span class="stat-suffix">+</span>
+                        <p class="stat-label">Years Experience</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <span class="stat-number counter" data-target="50">0</span>
+                        <span class="stat-suffix">+</span>
+                        <p class="stat-label">Projects Completed</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <span class="stat-number counter" data-target="30">0</span>
+                        <span class="stat-suffix">+</span>
+                        <p class="stat-label">Happy Clients</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <span class="stat-number counter" data-target="212">0</span>
+                        <span class="stat-suffix">K+</span>
+                        <p class="stat-label">Impressions Generated</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section id="skills" class="section skills-section bg-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title gradient-text">My Skills</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="skill-category">
+                        <h3 class="skill-cat-title"><i class="fas fa-code me-2"></i>Frontend</h3>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="95" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">CSS3</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="90" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="92" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Bootstrap</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="90" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="80" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category">
+                        <h3 class="skill-cat-title"><i class="fas fa-shopping-cart me-2"></i>CMS & E-Commerce</h3>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">WordPress</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="95" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Elementor</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="92" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">WooCommerce</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="88" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Shopify</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="85" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-category">
+                        <h3 class="skill-cat-title"><i class="fas fa-tools me-2"></i>Tools & Databases</h3>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="80" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git / GitHub</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="85" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Figma / Canva</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="85" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">cPanel / Hosting</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="88" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Technical SEO</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="85" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-category">
+                        <h3 class="skill-cat-title"><i class="fas fa-users me-2"></i>Soft Skills</h3>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Communication</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="95" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Teamwork</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="90" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Problem Solving</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="88" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Time Management</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-bar-fill" data-progress="85" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Icons -->
+            <div class="tech-stack mt-5" data-aos="fade-up">
+                <h3 class="text-center mb-4">Tech Stack</h3>
+                <div class="tech-icons">
+                    <div class="tech-icon"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                    <div class="tech-icon"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                    <div class="tech-icon"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+                    <div class="tech-icon"><i class="fab fa-php"></i><span>PHP</span></div>
+                    <div class="tech-icon"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
+                    <div class="tech-icon"><i class="fab fa-wordpress"></i><span>WordPress</span></div>
+                    <div class="tech-icon"><i class="fas fa-layer-group"></i><span>Elementor</span></div>
+                    <div class="tech-icon"><i class="fab fa-shopify"></i><span>Shopify</span></div>
+                    <div class="tech-icon"><i class="fas fa-shopping-cart"></i><span>WooCommerce</span></div>
+                    <div class="tech-icon"><i class="fas fa-database"></i><span>MySQL</span></div>
+                    <div class="tech-icon"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                    <div class="tech-icon"><i class="fas fa-server"></i><span>cPanel</span></div>
+                    <div class="tech-icon"><i class="fas fa-search"></i><span>SEO</span></div>
+                    <div class="tech-icon"><i class="fab fa-figma"></i><span>Figma</span></div>
+                    <div class="tech-icon"><i class="fas fa-video"></i><span>After Effects</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title gradient-text">My Projects</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Some of my recent works</p>
+            </div>
+            <!-- Filter Buttons -->
+            <div class="filter-buttons" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+
+            </div>
+            <!-- Projects Grid -->
+            <div class="row g-4 projects-grid" data-aos="fade-up">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6 project-item frontend">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="assets/images/ecommerce website(gadget)1.png" alt="E-Commerce Gadget Store" class="project-thumb">
+                            <span class="project-category">Frontend</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">E-Commerce Gadgets</h3>
+                            <p class="project-desc">Full e-commerce store with product catalog, cart system, and secure checkout.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">WordPress</span>
+                                <span class="tech-badge">WooCommerce</span>
+                                <span class="tech-badge">Elementor</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.mavongadgets.com/" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt me-1"></i>Live Demo</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="fab fa-github me-1"></i>Source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6 project-item backend">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="assets/images/engineering website.png" alt="Engineering Website" class="project-thumb">
+                            <span class="project-category">Backend</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Engineering Platform</h3>
+                            <p class="project-desc">Scalable platform with authentication, caching, and comprehensive documentation.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">Express</span>
+                                <span class="tech-badge">MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://allenclarkenergy.com/" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt me-1"></i>Live Demo</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="fab fa-github me-1"></i>Source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6 project-item fullstack">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="assets/images/foundation website.png" alt="Foundation Website" class="project-thumb">
+                            <span class="project-category">Full Stack</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Foundation Website</h3>
+                            <p class="project-desc">Responsive foundation website with donation system, impact stats, and multimedia content.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">HTML</span>
+                                <span class="tech-badge">CSS</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://jjtechofficial.com/wefound/" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt me-1"></i>Live Demo</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="fab fa-github me-1"></i>Source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6 project-item fullstack">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="assets/images/the antique website.png" alt="Antique Website" class="project-thumb">
+                            <span class="project-category">Full Stack</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Antique Store</h3>
+                            <p class="project-desc">Full-stack antique e-commerce platform with product catalog and secure checkout.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">WordPress</span>
+                                <span class="tech-badge">WooCommerce</span>
+                                <span class="tech-badge">Elementor</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt me-1"></i>Live Demo</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="fab fa-github me-1"></i>Source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="col-lg-4 col-md-6 project-item frontend">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="assets/images/portfolio website.png" alt="Portfolio Website" class="project-thumb">
+                            <span class="project-category">Frontend</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Corporate Portfolio</h3>
+                            <p class="project-desc">Modern corporate portfolio site with service showcase, team profiles, and contact system.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">WordPress</span>
+                                <span class="tech-badge">Elementor</span>
+                                <span class="tech-badge">PHP</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://khalixgroup.com/" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt me-1"></i>Live Demo</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="fab fa-github me-1"></i>Source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="col-lg-4 col-md-6 project-item frontend">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="assets/images/shopify website.png" alt="Shopify Website" class="project-thumb">
+                            <span class="project-category">Frontend</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Shopify Store</h3>
+                            <p class="project-desc">Complete Shopify e-commerce solution with product management and seamless checkout.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Shopify</span>
+                                <span class="tech-badge">Liquid</span>
+                                <span class="tech-badge">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://jmi4in-se.myshopify.com/" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt me-1"></i>Live Demo</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="fab fa-github me-1"></i>Source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="section services-section bg-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title gradient-text">My Services</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">What I can do for you — from design to deployment</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-desc">Custom websites and web applications built with HTML, CSS, JavaScript, PHP, and MySQL. Responsive, fast, and secure.</p>
+                        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fab fa-wordpress"></i>
+                        </div>
+                        <h3 class="service-title">WordPress & WooCommerce</h3>
+                        <p class="service-desc">Custom WordPress themes, Elementor builds, and WooCommerce stores optimized for performance and conversions.</p>
+                        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fab fa-shopify"></i>
+                        </div>
+                        <h3 class="service-title">Shopify Development</h3>
+                        <p class="service-desc">Shopify store setup, theme customization, product management, and optimized checkout systems for better conversions.</p>
+                        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="service-title">SEO & Optimization</h3>
+                        <p class="service-desc">Technical SEO, speed optimization, and content strategy to improve search rankings and drive organic traffic.</p>
+                        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS SECTION ==================== -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title gradient-text">Testimonials</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">What my clients and students say</p>
+            </div>
+            <div class="testimonial-carousel" data-aos="fade-up">
+                <div class="testimonial-track" id="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">"Best Frontend Developer Tutor ever. Abraham completely transformed my career. The hands-on training and expert instructors gave me real world skills fast. I went from beginner to job ready in no time. His mentorship truly connect me to high paying opportunities. 10/10 — highly recommend."</p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/review.jpeg" alt="Emmanuel O." class="author-avatar-img">
+                            <div>
+                                <h4 class="author-name">Emmanuel O.</h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-dots" id="carousel-dots"></div>
+                    <button class="carousel-btn next-btn" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="section contact-section bg-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title gradient-text">Get In Touch</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Have a project in mind? Let's talk — I'm available for freelance work</p>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="form-name" name="name" placeholder="Your Name" required>
+                                    <span class="form-error" id="name-error"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="form-email" name="email" placeholder="Your Email" required>
+                                    <span class="form-error" id="email-error"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="form-subject" name="subject" placeholder="Subject" required>
+                                    <span class="form-error" id="subject-error"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="form-message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                                    <span class="form-error" id="message-error"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg submit-btn">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                                    <span class="btn-loading d-none">
+                                        <i class="fas fa-spinner fa-spin"></i> Sending...
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="col-12">
+                                <div id="form-status" class="form-status" role="alert"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="contact-info">
+                        <div class="contact-social">
+                            <h4>Follow Me</h4>
+                            <div class="social-links">
+                                <a href="https://github.com/abrahamagbi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://linkedin.com/in/abraham-agbi" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">Abraham E. Agbi</a>
+                    <p class="footer-text">Results-driven Web Developer specializing in WordPress, Shopify, WooCommerce, and custom web development.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/abrahamagbi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/abraham-agbi" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Abraham E. Agbi. All rights reserved.</p>
+            </div>
+        </div>
+        <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>

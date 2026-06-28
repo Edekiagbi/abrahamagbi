@@ -1,0 +1,89 @@
+/* =====================================================
+   BOOTSTRAP CUSTOM OVERRIDES — Abraham Portfolio
+   ===================================================== */
+
+/* Buttons */
+.btn-primary {
+    background: var(--primary) !important;
+    border: none !important;
+    color: #fff !important;
+    box-shadow: 0 4px 15px rgba(204, 153, 102, 0.25);
+    transition: all 0.3s ease !important;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(204, 153, 102, 0.35);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--primary) !important;
+    color: var(--primary) !important;
+    background: transparent !important;
+    transition: all 0.3s ease !important;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary) !important;
+    color: #fff !important;
+    border-color: var(--primary) !important;
+    transform: translateY(-2px);
+}
+
+/* Navbar Toggler */
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+/* Progress Bars */
+.progress {
+    background-color: var(--skill-bar-bg);
+    height: 8px;
+    border-radius: 4px;
+}
+
+.progress-bar {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+/* Form Controls */
+.form-control {
+    background-color: var(--input-bg);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.form-control:focus {
+    background-color: var(--input-bg);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(204, 153, 102, 0.15);
+    color: var(--text-primary);
+}
+
+/* Container */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* Grid Gaps */
+.row.g-4 > * {
+    padding-left: calc(1.5rem / 2);
+    padding-right: calc(1.5rem / 2);
+}
