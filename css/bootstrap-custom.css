@@ -4,20 +4,20 @@
 
 /* Buttons */
 .btn-primary {
-    background: var(--primary) !important;
+    background: linear-gradient(135deg, var(--gold), var(--gold2)) !important;
     border: none !important;
-    color: #fff !important;
-    box-shadow: 0 4px 15px rgba(204, 153, 102, 0.25);
+    color: #000 !important;
+    box-shadow: 0 8px 28px rgba(239, 178, 12, 0.28);
     transition: all 0.3s ease !important;
-    font-family: 'Rubik', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    font-family: var(--font-ui);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
 }
 
 .btn-primary:hover {
-    background: var(--primary-dark) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(204, 153, 102, 0.35);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-gold);
 }
 
 .btn-primary:active {
@@ -25,19 +25,20 @@
 }
 
 .btn-outline-primary {
-    border: 2px solid var(--primary) !important;
-    color: var(--primary) !important;
+    border: 1px solid rgba(239, 178, 12, 0.25) !important;
+    color: var(--gold) !important;
     background: transparent !important;
     transition: all 0.3s ease !important;
-    font-family: 'Rubik', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    font-family: var(--font-ui);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
 }
 
 .btn-outline-primary:hover {
-    background: var(--primary) !important;
-    color: #fff !important;
-    border-color: var(--primary) !important;
+    background: rgba(239, 178, 12, 0.06) !important;
+    color: var(--gold) !important;
+    border-color: var(--gold) !important;
     transform: translateY(-2px);
 }
 
@@ -48,31 +49,31 @@
 
 /* Progress Bars */
 .progress {
-    background-color: var(--skill-bar-bg);
-    height: 8px;
-    border-radius: 4px;
+    background-color: rgba(239, 178, 12, 0.08);
+    height: 3px;
+    border-radius: 2px;
 }
 
 .progress-bar {
-    background: var(--primary);
-    border-radius: 4px;
+    background: linear-gradient(90deg, var(--gold2), var(--gold));
+    border-radius: 2px;
 }
 
 /* Form Controls */
 .form-control {
-    background-color: var(--input-bg);
-    border-color: var(--border-color);
-    color: var(--text-primary);
-    font-family: 'Rubik', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    background-color: #060606;
+    border-color: rgba(239, 178, 12, 0.1);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 .form-control:focus {
-    background-color: var(--input-bg);
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(204, 153, 102, 0.15);
-    color: var(--text-primary);
+    background-color: #070707;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(239, 178, 12, 0.08);
+    color: var(--white);
 }
 
 /* Container */

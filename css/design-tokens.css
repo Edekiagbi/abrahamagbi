@@ -1,0 +1,176 @@
+/* ============================================================
+   DESIGN TOKENS — distilled from the BiG-DreamzZ AI Studio
+   luxury-gold system (styling.txt). Load BEFORE style.css.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Orbitron:wght@400..900&family=Crimson+Pro:ital,wght@0,300..700;1,300..700&display=swap');
+
+/* ------------------------------------------------------------
+   1. COLOR TOKENS
+   ------------------------------------------------------------ */
+:root {
+    /* gold scale — the 5 brand values */
+    --gold:        #EFB20C;   /* primary gold */
+    --gold2:       #c8920a;   /* deep gold */
+    --gold-dim:    #7a5c08;   /* muted gold (text on dark) */
+    --glow:        rgba(239,178,12,0.22);
+    --red:         #D60000;   /* accent / urgent */
+    --navy:        #0D1B2A;   /* deep background */
+    --white:       #F5F5F5;   /* ink */
+    --black:       #000;
+    --card:        #0a0f18;   /* raised surface */
+    --muted:       #888;
+
+    /* type */
+    --font-heading: "Cinzel", serif;
+    --font-display: "Orbitron", sans-serif;
+    --font-body:    "Crimson Pro", Georgia, serif;
+
+    /* motion */
+    --ease-lux: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+/* ------------------------------------------------------------
+   2. CORNER-CUT (CLIP-PATH) BUTTONS
+   ------------------------------------------------------------ */
+.clip-btn {
+    font-family: var(--font-display);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 24px;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px,
+                       100% 100%, 12px 100%, 0 calc(100% - 12px));
+    transition: all 0.3s;
+}
+
+.clip-btn--gold {
+    background: linear-gradient(135deg, var(--gold), var(--gold2));
+    color: #000;
+}
+.clip-btn--gold:hover { filter: brightness(1.1); }
+
+.clip-btn--ghost {
+    background: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+}
+.clip-btn--ghost:hover { color: var(--white); background: var(--gold); }
+
+.clip-btn--red {
+    background: var(--red);
+    color: #fff;
+}
+.clip-btn--red:hover { filter: brightness(1.08); }
+
+/* ------------------------------------------------------------
+   3. GRAIN / GLOW OVERLAY SYSTEM
+   ------------------------------------------------------------ */
+.grain {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.glow-ring {
+    box-shadow: 0 0 20px var(--glow), 0 0 40px var(--glow);
+}
+
+.glow-text {
+    text-shadow: 0 0 60px rgba(239,178,12,0.5), 0 0 120px rgba(239,178,12,0.2);
+}
+
+/* animated gold aura behind hero marks */
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.18; }
+    50%      { opacity: 0.28; }
+}
+.glow-orb {
+    background: radial-gradient(circle, var(--glow), transparent 70%);
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* ------------------------------------------------------------
+   4. BOTTOM-NAV SPA SCAFFOLD  (showPage + .page.active)
+   ------------------------------------------------------------ */
+.page  { display: none; }
+.page.active {
+    display: block;
+    animation: pageIn 0.5s ease both;
+}
+@keyframes pageIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.bn {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 500;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 12px 14px;
+    background: linear-gradient(135deg, rgba(13,27,42,0.97), rgba(0,0,0,0.97));
+    border-top: 1px solid rgba(239,178,12,0.35);
+    backdrop-filter: blur(10px);
+}
+.bn-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-family: var(--font-display);
+    font-size: 0.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+.bn-item.active,
+.bn-item:hover { color: var(--gold); }
+.bn-item.active .bn-ico { filter: drop-shadow(0 0 6px var(--gold)); }
+
+/* ------------------------------------------------------------
+   5. KEYFRAME LIBRARY (core set from the source)
+   ------------------------------------------------------------ */
+@keyframes marq          { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes heroLine      { from { opacity: 0; transform: translateY(50px) skewY(3deg); } to { opacity: 1; transform: translateY(0) skewY(0); } }
+@keyframes fadeUp        { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideRight    { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes lineGrow      { from { width: 0; } to { width: 32px; } }
+@keyframes underlineGrow { from { width: 0; } to { width: 100%; } }
+@keyframes scrl          { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform: scaleY(1); transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+@keyframes float         { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
+@keyframes heroZoom      { from { transform: scale(1.0); } to { transform: scale(1.1); } }
+@keyframes heroBgIn      { from { opacity: 0; transform: scale(1.05); } to { opacity: 1; transform: scale(1.0); } }
+@keyframes navDrop       { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes navRise       { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes pulse-red     { 0%,100% { box-shadow: 0 0 0 0 rgba(214,0,0,0.4); } 50% { box-shadow: 0 0 0 8px rgba(214,0,0,0); } }
+@keyframes pulseDot      { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.25; transform: scale(0.6); } }
+@keyframes nsDotPulse    { 0%,100% { opacity: 1; box-shadow: 0 0 8px var(--red); } 50% { opacity: 0.4; box-shadow: 0 0 3px var(--red); } }
+@keyframes badgeShine    { 0%,100% { border-color: rgba(239,178,12,0.35); } 50% { border-color: rgba(239,178,12,0.7); } }
+@keyframes centerPulse   { 0%,100% { box-shadow: 0 0 20px var(--glow), 0 0 40px rgba(239,178,12,0.1); } 50% { box-shadow: 0 0 30px rgba(239,178,12,0.7), 0 0 60px rgba(239,178,12,0.2); } }
+@keyframes loaderGrain   { 0% { transform: translate(0,0); } 25% { transform: translate(-2px,2px); } 50% { transform: translate(2px,-2px); } 75% { transform: translate(-1px,-1px); } 100% { transform: translate(1px,1px); } }
+@keyframes loaderBloom   { 0% { opacity: 0; text-shadow: 0 0 0 rgba(239,178,12,0); transform: scale(0.95); letter-spacing: 0.15em; } 40% { opacity: 1; } 100% { opacity: 1; text-shadow: 0 0 60px rgba(239,178,12,0.5), 0 0 120px rgba(239,178,12,0.2); transform: scale(1); letter-spacing: 0.04em; } }
+@keyframes shimmer       { 0%,100% { opacity: 0; } 50% { opacity: 1; } }
+@keyframes scrollPulse   { 0%,100% { opacity: 0.3; height: 30px; } 50% { opacity: 0.8; height: 40px; } }

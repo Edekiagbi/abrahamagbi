@@ -3,7 +3,6 @@
    ===================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initThemeToggle();
     initMobileNav();
     initNavbarScroll();
     initSmoothScroll();
@@ -14,26 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initPortfolioFilter();
     initTestimonialCarousel();
 });
-
-/* ==================== THEME TOGGLE ==================== */
-function initThemeToggle() {
-    const toggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
-    const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
-
-    html.setAttribute('data-theme', savedTheme);
-
-    toggle.addEventListener('click', () => {
-        const current = html.getAttribute('data-theme');
-        const next = current === 'light' ? 'dark' : 'light';
-        html.setAttribute('data-theme', next);
-        localStorage.setItem('portfolio-theme', next);
-
-        // Animate toggle
-        toggle.style.transform = 'rotate(360deg)';
-        setTimeout(() => { toggle.style.transform = ''; }, 300);
-    });
-}
 
 /* ==================== MOBILE NAVIGATION ==================== */
 function initMobileNav() {
